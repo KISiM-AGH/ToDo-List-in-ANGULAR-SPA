@@ -4,10 +4,25 @@
     </div>
     <div class="card-body p4"> <!-- Tworzenie przcisku z polem textowym-->
         <div class="input-group">
-            <input type = "text" class="form-control" placeholder="Wpisz tytul gry"> <!--placeholder - domyslny napis w miejscu-->
-            <button class="addButton">
+            <input type = "text" class="form-control" placeholder="Wpisz tytul gry" #titleInput> <!--placeholder - domyslny napis w miejscu-->
+            <button class="btn"
+            (click) = "onClick(titleInput)"> <!--Odniesienie do wejsciowego pola tekstowego-->
                 <i class="fa-solid fa-circle-plus fa-xl"></i>
             </button>
         </div>
+        <ul class="list-group"> <!--lista zadan -->
+            <li class="list-group-item"
+            *ngFor="let item of todos">
+            <span>
+                <!-- Gdy zostanie wcisniete, zmien status -->
+                <i class="text-success" (click)="
+                onStatusChange(item.id, !item.isDone)" 
+                [ngClass]="item.isDone? 'fa-solid fa-circle-check' : 'fa-regular fa-circle'"> <!--Czy zadanie jest wykonane? Jeśli nie wyświetl puste koło, jeśli tak, zapełnij-->
+
+                </i> <!-- Dos sprawdzenia co to i-->
+                {{item.title}}
+            </span>
+        </li> <!--Element listy-->
+        </ul>
     </div>
 </div> 
