@@ -9,16 +9,15 @@ import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TodoComponent
+    AppComponent, //komponenty aplikacji
+    TodoComponent //komponenty listy todo
   ],
   imports: [
-    BrowserModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    BrowserModule, //moduł wyszukiwarki
+    AngularFireModule.initializeApp(environment.firebaseConfig), //inicjalizowanie aplikacji danymi konfiguracyjnymi do bazy danych
+    AngularFirestoreModule //moduł z bazydanych
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //inicjalizacja komponetow aplikacji przy pomocy biblioteki wykorzystujacej CSS
 })
 export class AppModule { }
-
