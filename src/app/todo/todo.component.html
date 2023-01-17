@@ -1,17 +1,18 @@
 <div class="card shadow-lg mt-5"> <!--Tworzenie nagłówka strony (banera na środku) z cieniem: Górny margines 5-->
-    <div class="card-header text-center"><!--Text wycentrowany-->
-        <h1 class="display-6 f2-bold">Lista gier</h1> <!-- pogeubienie, rozmiar czcionki 6-->
+    <div class="card-header text-center py-4 border-0"><!--Text wycentrowany-->
+        <h1 class="display-6 fw-bold">Lista gier na 2023 rok</h1> <!-- pogrubienie, rozmiar czcionki 6-->
     </div>
-    <div class="card-body p4"> <!-- Tworzenie przcisku z polem textowym-->
-        <div class="input-group">
-            <input type = "text" class="form-control" placeholder="Wpisz tytul gry" #titleInput> <!--placeholder - domyslny napis w miejscu-->
-            <button class="btn"
-            (click) = "onClick(titleInput)"> <!--Odniesienie do wejsciowego pola tekstowego-->
-                <i class="fa-solid fa-circle-plus fa-xl"></i>
-            </button>
-        </div>
-        <ul class="list-group"> <!--lista zadan -->
-            <li class="list-group-item"
+    <div class="card-body p-4"> <!-- Tworzenie przcisku z polem textowym-->
+        <ul class="list-group"> <!--lista zadan (graficznie dodanie jest to ramke) -->
+            <li class="list-group-item">   <div class="input-group">
+                <input type = "text" class="form-control shadow-none" placeholder="Wpisz tytuł gry" #titleInput> <!--placeholder - domyslny napis w miejscu-->
+                <button class="addButton text-success border-0"
+                (click) = "onClick(titleInput)"> <!--Odniesienie do wejsciowego pola tekstowego-->
+                    <i class="fa-solid fa-circle-plus fa-xl"></i>
+                </button>
+            </div></li>
+            <!--mb dodanie odstępu między-->
+            <li class="list-group-item" 
             *ngFor="let item of todos">
             <span>
                 <!-- Gdy zostanie wcisniete, zmien status -->
@@ -21,6 +22,10 @@
 
                 </i> <!-- Dos sprawdzenia co to i-->
                 {{item.title}}
+                <span class="float-end text-secondary" (click)="
+                onDelete(item.id)"> <!--Dodanie przcisku usuwania po prawej stronie-->
+                    <i class="fa-solid fa-trash-can"></i> <!--Dodanie ikony kosza na śmieci-->
+                </span>
             </span>
         </li> <!--Element listy-->
         </ul>
