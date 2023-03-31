@@ -1,5 +1,6 @@
 # Game List
 
+You can add all games you want to play and mark which one you have already ended!
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
 
 ## Development server
@@ -25,3 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Database
+This project use Google Firebase as a database:
+![obraz](https://user-images.githubusercontent.com/103267851/229042313-07c944c1-47dd-4966-b249-90c032baf3e8.png)
+
+## How it looks like?
+![obraz](https://user-images.githubusercontent.com/103267851/229042625-320206fa-9107-4b58-ab97-9ef7cfc5ca33.png)
