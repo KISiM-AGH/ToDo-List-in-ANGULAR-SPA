@@ -32,4 +32,4 @@ This project use Google Firebase as a database:
 ![obraz](https://user-images.githubusercontent.com/103267851/229042313-07c944c1-47dd-4966-b249-90c032baf3e8.png)
 
 ## How it looks like?
-![obraz](https://user-images.githubusercontent.com/103267851/229042625-320206fa-9107-4b58-ab97-9ef7cfc5ca33.png)
+![obraz](https://user-images.githubusercontent.com/103267851/229043897-1318f6a6-3ae5-4246-b549-deb456d7d3f3.png)
